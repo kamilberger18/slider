@@ -1,0 +1,30 @@
+body {
+    background-image: linear-gradient(to right top, #050709, #0f1c1f, #122d2a, #243e2d, #434d2b); 
+    
+}
+
+#container {
+    font-family: 'Lato', sans-serif;
+    max-width: 1024px;
+    padding: 20px;
+    margin: auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+    grid-template-areas: 
+        "slider list"
+        "form list";
+  
+
+}
+
+@media screen and (max-width: 746px) {
+    #container {
+        display: block; 
+        & > div {
+            margin-bottom: 40px;
+        }
+    }
+}

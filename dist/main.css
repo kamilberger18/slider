@@ -1,0 +1,157 @@
+#form {
+  grid-area: form;
+  color: white; }
+  #form form button[type="submit"] {
+    background-color: #599bb3;
+    border-radius: 12px;
+    border: 2px solid #29668f;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    font-style: italic;
+    padding: 12px 43px;
+    text-decoration: none;
+    text-shadow: 0px -1px 0px #3d768a; }
+    #form form button[type="submit"]:hover {
+      background-color: #408c99; }
+    #form form button[type="submit"]:active {
+      position: relative;
+      top: 1px; }
+  #form form input[type=text] {
+    width: 95%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+  #form form input[type="file"] {
+    display: none; }
+  #form form label[for="file"] {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer; }
+  #form span {
+    display: inline-block;
+    margin-left: 10px;
+    width: 150px;
+    color: red;
+    font-size: 0.7em; }
+
+#list {
+  grid-area: list;
+  overflow: scroll;
+  max-height: 600px;
+  background-color: white; }
+  #list .wrapper {
+    width: 100%; }
+    #list .wrapper:nth-child(odd) > * {
+      background-color: #f2f2f2; }
+    #list .wrapper:hover > * {
+      background-color: darkslategrey;
+      color: white; }
+  #list .photoName {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 60%;
+    height: 70px;
+    float: left;
+    padding: 20px; }
+  #list .view {
+    width: 25%;
+    height: 70px;
+    float: left;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+    #list .view img {
+      width: 70px;
+      height: 50px; }
+  #list .delete {
+    height: 70px;
+    width: 15%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block; }
+    #list .delete .delButton {
+      width: 25px;
+      height: 25px;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background-color: red; }
+
+body {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#050709), color-stop(#0f1c1f), color-stop(#122d2a), color-stop(#243e2d), to(#434d2b));
+  background-image: linear-gradient(to right top, #050709, #0f1c1f, #122d2a, #243e2d, #434d2b); }
+
+#container {
+  font-family: 'Lato', sans-serif;
+  max-width: 1024px;
+  padding: 20px;
+  margin: auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 50% 50%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  grid-template-areas: "slider list" "form list"; }
+
+@media screen and (max-width: 746px) {
+  #container {
+    display: block; }
+    #container > div {
+      margin-bottom: 40px; } }
+
+#slider {
+  grid-area: slider; }
+  #slider #slides {
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    border-radius: 4px;
+    border: solid 12px white;
+    background-clip: border-box; }
+    #slider #slides span {
+      position: absolute;
+      top: 80%;
+      z-index: 1000;
+      color: black;
+      display: block;
+      font-size: 200%; }
+      #slider #slides span:hover {
+        cursor: pointer; }
+    #slider #slides #pics {
+      width: 400px;
+      height: 300px;
+      margin: auto;
+      margin: 0;
+      padding: 0;
+      position: relative; }
+      #slider #slides #pics img {
+        width: 400px;
+        height: 300px;
+        position: relative;
+        display: block;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        float: left; }
+    #slider #slides #prev {
+      left: 10%; }
+    #slider #slides #next {
+      right: 10%; }
