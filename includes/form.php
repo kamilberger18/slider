@@ -1,4 +1,3 @@
-
 <h3>Dodaj nowy obraz</h3>
 <hr>
 
@@ -16,6 +15,3 @@
     <br>
     <button type="submit" name="sub">Wyślij</button>
 </form>
-
-
-
