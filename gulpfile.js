@@ -31,7 +31,7 @@ gulp.task('concat', function() {
     return gulp.src(['node_modules/jquery/dist/jquery.js', './app/js/*.js'])
     
         .pipe(concat('bundle.js'))
-//        .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/'));
 });
 
